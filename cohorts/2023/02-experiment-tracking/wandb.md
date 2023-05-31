@@ -1,6 +1,8 @@
 ## Weights & Biases workshop
 
-* Registration link: https://eventbrite.com/e/638021528567
+* Video: https://www.youtube.com/watch?v=yNyqFMwEyL4
+* Github repository: https://wandb.me/mlops-zoomcamp-github
+
 
 ## Homework with Weights & Biases
 
@@ -77,7 +79,7 @@ You can run the script using:
 python train.py \
   --wandb_project <WANDB_PROJECT_NAME> \
   --wandb_entity <WANDB_USERNAME> \
-  --data_artifact "<WANDB_PROJECT_NAME>/<WANDB_USERNAME>/NYC-Taxi:v0"
+  --data_artifact "<WANDB_USERNAME>/<WANDB_PROJECT_NAME>/NYC-Taxi:v0"
 ```
 
 Tip 1: You can find the artifact address under the `Usage` tab in the respective artifact's page.

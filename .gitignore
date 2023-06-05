@@ -21,3 +21,5 @@ __pycache__/
 
 
 .DS_Store
+
+/home/harsha/notebooks/mlops-learning/03-orchestration/3.5/create_s3_bucket_block

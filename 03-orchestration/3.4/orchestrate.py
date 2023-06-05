@@ -93,7 +93,7 @@ def train_best_model(
             dtrain=train,
             num_boost_round=100,
             evals=[(valid, "validation")],
-            early_stopping_rounds=20,
+            # early_stopping_rounds=20,
         )
 
         y_pred = booster.predict(valid)

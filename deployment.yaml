@@ -11,4 +11,8 @@ deployments:
   entrypoint: cohorts/2023/03-orchestration/homework/send_email.py:example_flow
   work_pool:
     name: zoompool
+- name: homework
+  entrypoint: cohorts/2023/03-orchestration/homework/orchestrate_with_markdown.py:main_flow_gcs
+  work_pool:
+    name: zoompool
     

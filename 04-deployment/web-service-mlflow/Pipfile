@@ -9,9 +9,11 @@ flask = "*"
 gunicorn = "*"
 mlflow = "*"
 boto3 = "*"
+ipykernel = "*"
+google-cloud-storage = "*"
 
 [dev-packages]
 requests = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"

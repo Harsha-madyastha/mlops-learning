@@ -56,7 +56,7 @@ def prepare_dictionaries(df: pd.DataFrame):
 
 
 def load_model(run_id):
-    logged_model = f's3://mlflow-models-alexey/1/{run_id}/artifacts/model'
+    logged_model = f'gs://mlops-data-2023/1/{run_id}/artifacts/model'
     model = mlflow.pyfunc.load_model(logged_model)
     return model
 
@@ -100,8 +100,8 @@ def get_paths(run_date, taxi_type, run_id):
     year = prev_month.year
     month = prev_month.month 
 
-    input_file = f's3://nyc-tlc/trip data/{taxi_type}_tripdata_{year:04d}-{month:02d}.parquet'
-    output_file = f's3://nyc-duration-prediction-alexey/taxi_type={taxi_type}/year={year:04d}/month={month:02d}/{run_id}.parquet'
+    input_file = f'https://d37ci6vzurychx.cloudfront.net/trip-data/{taxi_type}_tripdata_{year:04d}-{month:02d}.parquet'
+    output_file = f'gs://mlops-data-2023/taxi_type={taxi_type}/year={year:04d}/month={month:02d}/{run_id}.parquet'
 
     return input_file, output_file
 
@@ -129,7 +129,7 @@ def run():
     year = int(sys.argv[2]) # 2021
     month = int(sys.argv[3]) # 3
 
-    run_id = sys.argv[4] # 'e1efc53e9bd149078b0c12aeaa6365df'
+    run_id = sys.argv[4] # 'c9e45bb0ab4e4856b85c6b91c7c51b61'
 
     ride_duration_prediction(
         taxi_type=taxi_type,

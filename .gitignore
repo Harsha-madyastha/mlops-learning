@@ -24,3 +24,4 @@ __pycache__/
 /home/harsha/notebooks/mlops-learning/03-orchestration/3.5/create_s3_bucket_block
 03-orchestration/3.5/create_s3_bucket_block.py
 cohorts/2023/03-orchestration/homework/create_email_creds_block.py
+04-deployment/batch/score_deploy.py

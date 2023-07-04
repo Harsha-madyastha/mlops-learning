@@ -1,12 +1,18 @@
-description: null
-entrypoint: null
-flow_name: null
-name: null
-parameters: {}
-schedule: null
-tags: []
-version: null
-work_pool:
-  job_variables: {}
-  name: null
-  work_queue_name: null
+deployments:
+- name: taxi_local_data
+  entrypoint: 03-orchestration/3.4/orchestrate.py:main_flow
+  work_pool:
+    name: zoompool
+- name: taxi_gcs_data
+  entrypoint: 03-orchestration/3.5/orchestrate_s3.py:main_flow_s3
+  work_pool:
+    name: zoompool
+- name: email-trial
+  entrypoint: cohorts/2023/03-orchestration/homework/send_email.py:example_flow
+  work_pool:
+    name: zoompool
+- name: homework
+  entrypoint: cohorts/2023/03-orchestration/homework/orchestrate_with_markdown.py:main_flow_gcs
+  work_pool:
+    name: zoompool
+    

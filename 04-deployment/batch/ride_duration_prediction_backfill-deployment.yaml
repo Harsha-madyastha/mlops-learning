@@ -1,9 +1,9 @@
 ###
-### A complete description of a Prefect Deployment for flow 'ride-duration-prediction'
+### A complete description of a Prefect Deployment for flow 'ride-duration-prediction-backfill'
 ###
-name: ride_duration_prediction
+name: backfill
 description: null
-version: 97d5a75b21b996279ec6a8770d38d04f
+version: 6707f84a856bd70177064eefdc5947f0
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: null
@@ -26,30 +26,15 @@ infrastructure:
 ###
 ### DO NOT EDIT BELOW THIS LINE
 ###
-flow_name: ride-duration-prediction
+flow_name: ride-duration-prediction-backfill
 manifest_path: null
 storage: null
 path: /home/harsha/notebooks/mlops-learning/04-deployment/batch
-entrypoint: score.py:ride_duration_prediction
+entrypoint: score_backfill.py:ride_duration_prediction_backfill
 parameter_openapi_schema:
   title: Parameters
   type: object
-  properties:
-    taxi_type:
-      title: taxi_type
-      position: 0
-      type: string
-    run_id:
-      title: run_id
-      position: 1
-      type: string
-    run_date:
-      title: run_date
-      position: 2
-      type: string
-      format: date-time
-  required:
-  - taxi_type
-  - run_id
+  properties: {}
+  required: null
   definitions: null
-timestamp: '2023-06-19T21:44:05.003813+00:00'
+timestamp: '2023-06-20T23:04:50.749773+00:00'
